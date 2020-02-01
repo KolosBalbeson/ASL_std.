@@ -1,0 +1,113 @@
+/*  */
+
+
+/* Контейнер */
+.container {
+	display: block;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+/* Контент */
+.content {
+	display: block;
+	width: 100%;
+}
+
+/* Галерея */
+.gallary {
+	width: 100%;
+	min-height: 600xp;
+}
+
+/* Отступы и линии галереи */
+.inner-gallary {
+	width: 85%;
+	padding: 5px;
+}
+
+/* Ячека картинки */
+.cell-gallary-img {
+	min-width: 120px;
+	height: 120px;
+	padding: 5px;
+	float: left;
+}
+
+/* Картинка */
+.cell-gallary-img img {
+	display: inline-block;
+	width: auto;
+	height: 110px;
+	cursor: defult;
+	background-color: #fff;
+	border: 1px solid #000;
+}
+
+
+/* ***** */
+/* Соцсети */
+.social-netw {
+	display: block;
+	width: 220px;
+	position: absolute;
+	z-index: 100;
+	right: 4%;
+	top: 8%;
+	height: 60px;
+	margin: 0 auto;
+}
+
+/* Дискорд */
+.discord {
+	display: inline-block;
+	width: 60px;
+	float: left;
+	margin-left: 6px;
+	margin-right: 6px;
+	cursor: pointer;
+	transition: 0.7s linear;
+}
+
+.discord:hover {
+  -webkit-transform: rotate(380deg);
+  transform: rotate(380deg);
+	box-shadow:1px 2px #83E2D7;
+}
+
+/* Вк */
+.vk {
+	display: inline-block;
+	width: 60px;
+	float: left;
+	margin-left: 6px;
+	margin-right: 6px;
+	cursor: pointer;
+	transition: 0.7s linear;
+}
+.vk:hover {
+  -webkit-transform: rotate(380deg);
+  transform: rotate(380deg);
+	box-shadow:1px 2px #83E2D7;
+}
+
+/* Википедия */
+.wiki {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin-left: 6px;
+	margin-right: 6px;
+	cursor: pointer;
+	transition: 0.7s linear;
+}
+.wiki:hover {
+  -webkit-transform: rotate(380deg);
+  transform: rotate(380deg);
+	box-shadow:1px 2px #83E2D7;
+}
+
+.clear {
+	clear: both;
+}

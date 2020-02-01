@@ -1,0 +1,24 @@
+/*  */
+
+
+.my_block_in_img {
+	animation-name: spin;
+	animation-duration: 3s;
+	animation-timing-function: cubic-bezier(0,0,0,0);
+	animation-delay: 1.6s;
+	animation-iteration-count: normal;
+	animation-direction: alternate;
+}
+
+.my_block_in_img:hover {
+	animation-play-state: paused;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}

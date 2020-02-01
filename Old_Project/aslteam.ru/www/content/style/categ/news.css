@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+section {
+	width:100%;
+	position: relative;
+}
+
+/*=======Новости=======*/
+/* Новости */
+.news {
+	margin: 10px;
+	margin-top: 0;
+}
+
+/* Название ветки */
+.logo-news {
+	font-size: 24px;
+	text-align: center;
+	color: #fff;
+	padding: 5px;
+}
+
+/* Ссылка новости */
+.link-news {
+	display: block;
+	margin-bottom: 20px;
+	border: 1px solid #000;
+	border-radius: 5px;
+	height: 200px;
+	box-shadow: 0px 0px 15px 1px #000000 ;  /* inset */
+	background-color: rgba(0,0,0, 0.5);
+}
+
+.my_block li {
+	display: inline-block;
+	margin: 5px;
+}
+
+/* Картинка новоти */
+.imager-new {
+	width: 120px;
+	height: 180px;
+	background-position: center center; 
+	-webkit-background-size:100% auto;
+	-moz-background-size:cover; 
+	-khtml-background-size:cover; 
+	background-size:cover; 
+	border: 1px solid #000;
+	border-radius: 5px;
+}
+
+/* Блок с информацией */
+.info-new {
+	width: 78%;
+	text-align: left;
+	text-shadow: 1px 1px 5px rgba(0,0,0,9); 
+	color: inherit;
+	font-size: 18px;
+	font-weight: bold;
+	position: relative;
+}
+
+/* Нвзвание новоти */
+.title {
+	font-size: 22px;
+}
+.title::after {
+	content: '!';
+}
+
+/* Текст новоти */
+.info {
+	padding-left: 3px;
+	height: 140px;
+	overflow: hidden; 
+}
+
+/* Дата новоти */
+.data {
+	font-size: 14px;
+}
+
+
+/*=======Новости=======*/

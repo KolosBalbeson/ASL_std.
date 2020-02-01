@@ -1,0 +1,287 @@
+@charset "utf-8";
+
+/*  */
+
+
+/* Контейнер */
+.container {
+	display: block;
+	width: 1000px;
+	margin: 0 auto;
+}
+
+/* Контент */
+.content {
+	display: block;
+	float: left;
+	width: 70%;
+}
+
+/* Новостной блок */
+.news {
+	padding: 10px;
+}
+
+/* Новостная ячейка */
+.news-cell {
+	height: 600px;
+	width: 100%;
+	background-color: rgba(255,255,255, 0.2);
+	border-radius: 5px;
+}
+
+/* Отступы для линии */
+.border-cell {
+	display: block;
+	width: 100%;
+	height: 150px;
+}
+
+/* Отступы для линии */
+.border-cell a {
+	display: block;
+	width: 100%;
+	height: 150px;
+	padding: 10px;
+	cursor: default;
+}
+
+/* Линии */
+.inner-border-cell {
+	display: block;
+	width: 100%;
+	height: 100%;
+	padding: 10px;
+	border-right: 2px solid #000;
+	border-left: 2px solid #000;
+}
+.border-cell:after {
+	content: " ";
+}
+
+/* Ячека картинки */
+.cell-news-img {
+	width: 20%;
+	float: left;
+}
+
+/* Текстовая ячейка */
+.cell-text {
+	width: 80%;
+	float: left;
+}
+
+/* Область для картинки */
+.news-img {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+/* Картинка */
+.news-img img {
+	display: block;
+	background-color: #fff;
+	width: 110px;
+	height: 110px;
+	cursor: pointer;
+}
+
+/* Название новости */
+.news-name {
+	display: inline-block;
+	min-width: 80px;
+	font-family: 'Caveat'; /* Arial */
+	font-size: 22px;
+	font-weight: bold;
+	color: #fff;
+	cursor: pointer;
+}
+/* Название новсти */
+.news-name:hover:before {
+	content: '<';
+	color: #83E2D7;
+}
+/* Название новсти */
+.news-name:hover:after {
+	content: '>';
+	color: #83E2D7;
+}
+
+/* Текст новсти */
+.news-text {
+	font-family: 'Comfortaa';
+    overflow: hidden; /* Обрезаем содержимое */
+	font-size: 14px;
+    padding: 5px; /* Поля */
+	height: 60px; 
+	margin-bottom: 5px;
+	font-weight: bold;
+	color: #83E2D7;
+	cursor: text;
+}
+
+
+/* дата или время новости */
+.news-data {
+	font-family: 'Pacifico';
+    white-space: nowrap; /* Отменяем перенос текста */
+    padding: 3px;
+    padding-left: 0px;
+	color: #000;
+	display: inline-block;
+	min-width: 78px;
+}
+
+/* Блок под новстным блоком */
+.inner-news {
+	display: block;
+	width: 100%;
+	height: 60px;
+}
+
+/* Цифры для перехода на др. страницы */
+.news-number {
+	width: 180px;
+	margin: 0 auto;
+	height: 30px;
+	text-align: center;
+}
+
+/* Цифры для перехода на др. страницы */
+.news-number a {
+	display: inline-block;
+	width: 20px;
+	font-size: 20px;
+	padding-bottom: 3px;
+	background: gray;
+	border-radius: 15%;
+	background: rgba(255,255,255, 0.2);
+	font-family: 'Pacifico';
+	color: #000;
+}
+
+/* Цифры для перехода на др. страницы */
+.news-number a:hover {
+	box-shadow: 0px 0px 8px 0px #000000 inset;
+}
+
+/* /////////////////////////////////////// */
+
+/* Боковая панель */
+.sidebar {
+	display: block;
+	float: left;
+	width: 30%;
+	height: 600px;
+}
+
+/* Под панель */
+.inner-panele {
+	padding: 10px;
+	width: 100%;
+	height: 100%;
+}
+
+/* Панель */
+.panele {
+	display: inline-block;
+	padding-top: 10px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255,255,255, 0.2);
+	border-radius: 5px;
+}
+
+/* ***** */
+/* Соцсети */
+.social-netw {
+	display: block;
+	width: 220px;
+	height: 60px;
+	margin: 0 auto;
+}
+
+/* Дискорд */
+.discord {
+	display: inline-block;
+	width: 60px;
+	float: left;
+	margin-left: 6px;
+	margin-right: 6px;
+	cursor: pointer;
+	transition: 0.7s linear;
+}
+.discord:hover {
+  -webkit-transform: rotate(380deg);
+  transform: rotate(380deg);
+	box-shadow:1px 2px #83E2D7;
+}
+.discord:active {box-shadow: 0px 0px 6px 0px #000000 inset;}
+
+/* Вк */
+.vk {
+	display: inline-block;
+	width: 60px;
+	float: left;
+	margin-left: 6px;
+	margin-right: 6px;
+	cursor: pointer;
+	transition: 0.7s linear;
+}
+.vk:hover {
+  -webkit-transform: rotate(380deg);
+  transform: rotate(380deg);
+	box-shadow:1px 2px #83E2D7;
+}
+.vk:active {box-shadow: 0px 0px 6px 0px #000000 inset;}
+
+/* Википедия */
+.wiki {
+	display: inline-block;
+	width: 60px;
+	height: 60px;
+	float: left;
+	margin-left: 6px;
+	margin-right: 6px;
+	cursor: pointer;
+	transition: 0.7s linear;
+}
+.wiki:hover {
+  -webkit-transform: rotate(380deg);
+  transform: rotate(380deg);
+	box-shadow:1px 2px #83E2D7;
+}
+.wiki:active {box-shadow: 0px 0px 6px 0px #000000 inset;}
+
+.clear {
+	clear: both;
+}
+/* ***** */
+
+/* Блок для текста */
+.sidebar-cell {
+	padding-top: 10px;
+	display: block;
+	width: 220px;
+	height: 60px;
+	margin: 0 auto;
+}
+
+/* Текст */
+.text-sidebar {
+	font-family: 'Caveat';
+	font-size: 22px;
+	font-weight: bold;
+	color: #fff;
+}
+
+/* Возможная реклама */
+.advert {
+	
+}
+
+
+
+
+

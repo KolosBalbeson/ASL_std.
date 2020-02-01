@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+/* Ћпыт */
+.lvl {
+	float: left;
+	width: 110px;
+	height: 20px;
+	text-shadow: 1px 1px 1px #000;
+}
+.box-xp {
+	margin-top: 3px;
+	float: left;
+	width: 152px;
+	height: 20px;
+	border: 1px solid #000;
+	background-color: rgba(221,221,221, 0.5);
+	overflow: hidden;
+	font-size: 14px;
+	text-align: center;
+	position: relative;
+}
+.box-xp span {
+	padding: 3px;
+	z-index: 11;
+	position: absolute;
+	bottom: -3.5px;
+	left: 53px;
+	color: rgba(0,0,0, 9);
+	text-shadow: 1px 1px 2px #fff ;  /* inset */
+}
+/* Ћпыт */
+.inner-box-xp {
+	height: 18px;
+	background-color: rgba(10,198,14, 9);
+}

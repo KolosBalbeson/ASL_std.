@@ -1,0 +1,271 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+	outline: none;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+/*min 1024*/
+body {
+	background-image: url(fon.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	font-family: "Arial", sans-serif;
+	font-size: 16px;
+	color: #ffffff;
+}
+a {
+	color: skyblue;
+	text-decoration: none;
+}
+ul,li {
+	list-style: none;
+}
+.container {
+	display: block;
+	margin: 0 auto;
+	max-width: 1920px;
+}
+.contain {
+	margin: 3% 4%;
+	background-color: #040C2C;
+	border: 1px solid #343A54;
+	min-height: 100vh;
+}
+/* Scroll */
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+::-webkit-scrollbar:vertical {
+  width: 5px;
+}
+::-webkit-scrollbar:horizontal {
+  height: 0;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(85, 85, 85);
+}
+::-webkit-scrollbar-track-piece {
+  background-color: #323639;
+}
+
+/* Global navigation */
+header {
+	display: block;
+	width: 100%;
+	height: 75px;
+	background-color: #040C2C;
+}
+.global-navigation-back {
+	display: block;
+	width: 100%;
+	height: 75px;
+	background-color: #040C2C;
+}
+.global-navigation {
+	position: absolute;
+	width: inherit;
+	height: 46px;
+}
+.global-navigation ul {
+	display: flex;
+	justify-content: center;
+	border-left: 1px solid #343A54;
+	border-bottom: 1px solid #343A54;
+	border-right: 1px solid #343A54;
+}
+.gl-cell {
+	display: inline-flex;
+}
+.globalLinks {
+	min-width: 110px;
+	height: 75px;
+	padding: 8px 7px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+	transition: box,background .6s;
+}
+.gl-cell:nth-child(2) .globalLinks {
+	border-left: 1px solid #000;
+}
+.gl-cell:nth-child(3) .globalLinks {
+	border-left: 1px solid #000;
+	border-right: 1px solid #000;
+}
+.gl-cell:nth-child(4) .globalLinks {
+	border-right: 1px solid #000;
+}
+.globalLinks:hover {
+	box-shadow: 0px 0px 20px #000;
+	background-color: rgba(0,251,255, 0.1);
+	transition: box,background .6s;
+}
+.globalLinks:active {
+	background-color: #000;
+	box-shadow: 0 0 0;
+}
+.globalLinks img {
+	width: 35px;
+	height: 35px;
+}
+/*
+#logo {
+	width: 55px;
+	height: 59px;
+} */
+.globalLinks p {
+	padding-top: 3px;
+}
+
+/* Content */
+.block-content {
+	text-align: center;
+	margin: 3% 4%;
+	background-color: #040C2C;
+	border: 1px solid #343A54;
+	min-height: 100vh;
+}
+
+.content-header {
+	display: flex;
+	justify-content: center;
+	padding: 10px 0 10px 0;
+	width: 100%;
+}
+.content-header h1 {
+	font-size: 18px;
+	border-bottom: 2px solid #fff;
+	width: 90px;
+}
+
+
+
+
+
+
+
+
+
+
+.about_us {
+	width: 100%;
+	text-align: center;
+}
+.about_us-text {
+	width: 70%;
+	margin-left: 15%;
+}
+.about_us-text h1 {
+	font-size: 24px;
+	padding-top: 42px;
+}
+.about_us-text p {
+	font-size: 18px;
+	padding-top: 30px;
+}
+.about_us-link {
+	display: flex;
+	justify-content: center;
+	margin-top: 20px;
+}
+.sl-nk {
+	display: inline-flex;
+	position: relative;
+	width: 66px;
+	margin: 0 17px;
+}
+.sl-nk > img {
+	width: inherit;
+	height: inherit;
+}
+.sl-nk:hover:after {
+	content: "";
+	position: absolute;
+	width: 66px;
+	height: 66px;
+	background-color: rgba(255,255,255, .2);
+	border-radius: 50%;
+}
+.team {
+	padding: 0px 10%;
+}
+.box-team {
+    padding-top: 20px;
+}
+.cell-team {
+	display: inline-block;
+	/* width: 252px; */
+    height: 206px;
+    position: relative;
+}
+.infoT:after {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-bottom: 20px solid #2E3754;
+	border-right: 20px solid transparent;
+	left: -1px;
+	top: -20px;
+}
+.in-cell-team {
+	margin: 10px 34px;
+	cursor: pointer;
+    width: 156px;
+}
+.icon {
+	height: 144px;
+	text-align: center;
+}
+.icon img {
+	border-radius: 5px;
+	border: 2px solid rgba(124,124,124, 0.2);
+}
+.icon figcaption {
+	padding: 2px 0px;
+}
+.infoT {
+	display: block;
+	position: absolute;
+	width: 320px;
+	height: 150px;
+	left: 36px;
+	bottom: -136px;
+	background-color: #000429;
+	border: 1px solid #2E3754;
+	border-radius: 2px;
+	z-index: 1000;
+}
+.infoT-name {
+	display: flex;
+}
+.infoT-name p {
+	min-width: 156px;
+}
+.infoT-name a {
+	width: 44px;
+}
+.infoT-name a img {
+	width: inherit;
+	height: inherit;
+}
+input {
+	display: none;
+}
+/* Footer */
+footer {
+	width: 100%;
+	background-color: #040C2C;
+	min-height: 60px;
+}
+/*
+width: inherit;
+height: inherit;
+
+
+	height: 300px;
+	overflow-y: scroll;
+*/
