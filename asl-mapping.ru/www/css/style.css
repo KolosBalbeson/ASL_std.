@@ -1,0 +1,147 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+	outline: none;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+body {
+	background-image: url("../imager/backgrounds/back.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	font-family: "Arial", sans-serif;
+	font-size: 16px;
+	color: #ffffff;
+}
+a {
+	color: skyblue;
+	text-decoration: none;
+}
+ul,li {
+	list-style: none;
+}
+.loaddata2D,.loaddata3D{opacity: 0;}
+.wrapper {
+	position: relative;
+	padding: 5%;
+}
+.container {
+	position: relative;
+	max-width: 1120px;
+	max-height: 560px;
+	margin: 0 auto;
+	border: 1px solid #343A54;
+	background-color: #040C2C;
+ 	overflow: hidden;
+}
+map {
+	max-width: inherit;
+	max-height: inherit;
+}
+map img {
+	position: relative;
+	max-width: inherit;
+	max-height: inherit;
+	margin: 0 auto;
+	/* Zoom 
+	-moz-transition: all 1.5s ease-out;
+	-o-transition: all 1.5s ease-out;
+	-webkit-transition: all 1.5s ease-out;
+	*/
+}
+/*
+map img:hover {
+   -webkit-transform: scale(5);
+   -moz-transform: scale(5);
+   -o-transform: scale(5);
+}
+			<div class="delta" id="delta">0</div>
+*/
+
+/* Glass */
+.box {
+	position: absolute;
+	display: none;
+	width: 125px;
+	height: 125px;
+    box-shadow:
+      0 0 0 3px rgba(134,66,204, 0.85),
+      0 0 3px 3px rgba(0, 0, 0, 0.25), 
+      inset 0 0 20px 2px rgba(0, 0, 0, 0.25);
+      z-index: 25;
+}
+
+/* Menu */
+.menu {
+	position: absolute;
+	width: 250px;
+	height: 250px;
+    cursor: pointer;
+	background-color: #ccc;
+	color: #fff;
+    z-index: 21;
+}
+.inner-menu {
+	position: relative;
+	max-width: inherit;
+	max-height: inherit;
+}
+.w_click {
+	position: absolute;
+	left: 75px;
+	top: 50px;
+  	border: 40px solid transparent;
+  	border-top: 0;
+	border-bottom-color: #8642CC;
+    z-index: 22;
+}
+.a_click {
+	position: absolute;
+	left: 28px;
+	top: 80px;
+  	border: 40px solid transparent;
+    border-left: 0;
+	border-right-color: #8642CC;
+    z-index: 22;
+}
+.s_click {
+	position: absolute;
+	left: 75px;
+	top: 150px;
+  	border: 40px solid transparent;
+ 	border-bottom: 0;
+	border-top-color: #8642CC;
+    z-index: 22;
+}
+.d_click {
+	position: absolute;
+	left: 162px;
+	top: 80px;
+  	border: 40px solid transparent;
+  	border-right: 0;
+	border-left-color: #8642CC;
+    z-index: 22;
+}
+
+
+
+#map2d {
+	display: block;
+}
+
+#map3d {
+	display: none;
+}
+
+.point {
+	display: block;
+	position: absolute;
+	width: 32px;
+	height: 32px;
+	background-color: #FFDD00;
+	cursor: move;
+	z-index: 1111;
+}
