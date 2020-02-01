@@ -1,0 +1,28 @@
+User-agent: *
+Disallow: /config/
+Disallow: /scripts/
+Disallow: /body/
+Disallow: /imager/
+Disallow: *.jpg
+Disallow: *.png
+Disallow: *.gif
+
+User-agent: Googlebot
+Allow: *.css
+Allow: *.js
+Disallow: /config/
+Disallow: /scripts/
+Disallow: /body/
+Disallow: /imager/
+Disallow: *.jpg
+Disallow: *.png
+Disallow: *.gif
+
+User-agent: Yandex
+Disallow: /config/
+Disallow: /scripts/
+Disallow: /body/
+Disallow: /imager/
+Disallow: *.jpg
+Disallow: *.png
+Disallow: *.gif

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="keywords" content="«Интернет магазин» - Мишкина Радость, мёд, пчелопродукция, купить, цена">
+		<meta name="description" content="Интернет магазин от лица Ханина Максима Сергеевича. Я предлагаю ассортимент натуральных продуктов пчеловодства высокого качества.">
+		<meta name="copyright" content="Все права принадлежат Ханину Максиму Сергеевичу. Использование любых материалов возможно только с разрешения автора."> 
+		<title>«Интернет магазин» - Мишкина Радость</title>
+		<!-- Mini-logo -->
+		<link rel="shortcut icon" href="imager/favicon.ico" type="image/x-icon">
+		<!-- Подключение CSS -->
+		<link rel="stylesheet" href="style/main.css" type="text/CSS">
+		<!-- Подключение Шрифтов -->
+		<link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Caveat+Brush" rel="stylesheet">
+		<!-- Подключение jQuery -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+	</head>
+	<body id="body">
+		<header>
+			<div class="inner-header">
+				<ul id="menu" class="menu">
+					<li id="logo-text" class="sell"><a href="">Мишкина Радость</a></li>
+					<li id="header-text" class="sell"><a href="#we">О нас</a></li>
+					<li id="header-text" class="sell"><a href="#catl">Каталог</a></li>
+					<li id="header-text" class="sell"><a href="#cont">Контакты</a></li>
+					<li id="header-text" class="sella"><a href="#del">Доставка и Оплата</a></li>
+					<li class="clear"></li>
+				</ul>
+			</div>
+			<div class="info-polosa">
+				Заказы принимаются по номеру: 8-902-xxx-61-16
+			</div>
+		</header>
+		<section class="container">
+			<div class="content">
+				<div class="info">
+					<span id="we">О нас</span>
+					<div class="info-text">
+					Мёд – одно из самых удивительных чудес природы. 
+					Технология его создания пчёлами проверена миллионами лет!
+					Сложно найти натуральный продукт, который уместил бы в себе столько полезного. 
+					Ведь мед содержит целый кладезь лечебных веществ. 
+					Технология его создания пчёлами проверена миллионами лет! 
+					Главная задача пчеловода - сохранить это совершенство для людей.
+					Наше хозяйство вобрало в себя семейные традиции поколений пчеловодов, 
+					опираясь на многовековые традиции пчеловодства.
+					Весь дружный коллектив пчёл работает с весны до осени и производит великолепный натуральный мед, 
+					собирая нектар с сотен видов полезных и лекарственных трав средней полосы, 
+					произрастающих в экологически чистой зоне! 
+					Купить мед, мед в сотах, пыльцу, пергу, воск и другие продукты пчеловодства, 
+					а также всевозможные оздоровительные бальзамы и травяные сборы, вы можете в нашем интернет-магазине «Мишкина радость». 
+					<span class="end-info">Здоровья Вам! Будем рады Вас видеть нашим клиентом и гостем у нас на пасеке!</span>
+					</div>
+				</div>
+				<div class="shop">
+					<span id="catl">Каталог</span>
+					<div class="catalog">
+						<?php
+						while( $row = mysqli_fetch_array($content) )
+						{
+						?>
+							<div class="cell-tovar">
+								<div class="inner-cell-tovar">
+									<div class="tovar-img"><img src="imager/tovar/<?php echo $row['imager']; ?>" alt="<?php echo $row['name']; ?>"></div>
+									<div class="tovar-info"><div class="tovar-name format"><?php echo $row['name']; ?></div>
+										<div id="ryb">Цена за 
+											<select name="" id="">
+												<option value="22">22 гр.</option>
+												<option value="122">122 гр.</option>
+												<option value="933">933 гр.</option>
+												<option value="9999">9999 гр.</option>
+											</select>
+										 	:<span> 99 руб.</span>
+										</div>
+										<text class="format">Описание:
+											<span><i>Мед мед мед мед мед мед мед мед мед мед</i></span>
+										</text>
+										<text><b>Есть в наличии!</b></span></text>
+										<div class="add-to-cart"><a href="tovar?id=1">Заказать</a></div>
+									</div>
+								</div>
+							</div>
+						<?php
+						}
+						mysqli_close($connect);
+						?>
+						<div class="clear"></div>
+						<!-- Товар -->
+					</div>
+				</div>
+				<div class="contacts">
+					<span id="cont">Контакты</span>
+					<div class="cont-info">
+						Для заказа мёда нужно позвонить по телефону <b>8-902-xxx-61-16</b>, написать на электронную почту <b>bee71max@x.x</b>.
+					</div>
+				</div>
+				<div class="deliver">
+					<span id="del">Доставка и Оплата</span>
+					<div class="del-money">
+						1.	Мы предлагаем мед в таре следующих объемов: <br>
+						<span id="litr">1 литр</span> (пластиковый контейнер с крышкой) <br>
+						<span id="litr">2 литра</span> (пластиковый контейнер с крышкой) <br>
+						<span id="litr">3 литра</span> (пластиковый контейнер с крышкой) <br>
+						«Возможна продажа в "Вашу тару"» <br>
+						2.	Минимальный объем для заказа - 1 литровая банка меда. <br>
+						3.	Для постоянных клиентов предусмотрены постоянные скидки. <br>
+						Способы оплаты: <br>
+						•	Оплата осуществляется наличным/безналичным расчетом в российских рублях. <br>
+						Способы доставки: <br>
+						•	Бесплатная доставка по г. Ефремов. (При заказе от 3-х литров) <br>
+						По Тульской и прилегающим областям при оптовом заказе. <br>
+						<span id="H">
+							Внимание!!! Необходимо указать заказываемое количество мёда (в килограммах или литрах), адрес, телефон и удобное время для доставки. <br>
+						</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="telefon">
+				<span>Наш телефон: 8-902-xxx-61-16</span>
+			</div>
+			<div class="email">
+				<span>Почта: bee71max@x.x</span>
+				<span><em class="fa fa-vk"></em></span>
+			</div>
+			<div class="clear"></div>
+		</footer>
+		<span class="lin" id="lin">
+			<a href="#body">↑</a>
+		</span>
+			<!-- Подключение JavaScript и jQuery -->
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+			<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+			<script src="scripts/main.js"></script>
+			<!-- Yandex.Metrika counter -->
+			<script type="text/javascript" >
+				(function (d, w, c) {
+					(w[c] = w[c] || []).push(function() {
+						try {
+							w.yaCounter49435057 = new Ya.Metrika2({
+								id:49435057,
+								clickmap:true,
+								trackLinks:true,
+								accurateTrackBounce:true
+							});
+						} catch(e) { }
+					});
+
+					var n = d.getElementsByTagName("script")[0],
+						s = d.createElement("script"),
+						f = function () { n.parentNode.insertBefore(s, n); };
+					s.type = "text/javascript";
+					s.async = true;
+					s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+					if (w.opera == "[object Opera]") {
+						d.addEventListener("DOMContentLoaded", f, false);
+					} else { f(); }
+				})(document, window, "yandex_metrika_callbacks2");
+			</script>
+			<noscript><div><img src="https://mc.yandex.ru/watch/49435057" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+			<!-- /Yandex.Metrika counter -->
+	</body>
+</html>
