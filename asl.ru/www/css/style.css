@@ -1,0 +1,169 @@
+*, *::before, *::after {
+	box-sizing: border-box;
+	outline: none;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+body {
+	background-image: url("../imager/technol/backgrounds/back.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	font-family: "Arial", sans-serif;
+	font-size: 16px;
+	color: #ffffff;
+}
+a {
+	color: skyblue;
+	text-decoration: none;
+}
+ul,li {
+	list-style: none;
+}
+.wrapper {
+	
+}
+.container {
+	position: relative;
+	width: 862px;
+	margin: 0 auto;
+}
+
+header {
+	width: 100%;
+	height: 80px;
+	background-color: #040C2C;
+	border-bottom: 1px solid #343A54;
+}
+header .container {
+	display: flex;
+	height: inherit;
+	padding-top: 3px;
+	background-color: #040C2C;
+	border-bottom: 1px solid #343A54;
+}
+
+.logotip {
+	margin-left: 30px;
+	width: 30%;
+	padding-top: 10px;
+}
+.logotip img {
+	width: inherit;
+}
+
+.menu_list {
+	position: absolute;
+	display: flex;
+	right: 30px;
+}
+.menu_list li{
+	min-width: 60px;
+	padding-left: 22px;
+}
+.menu_list li a {
+	display: block;
+	padding: 5px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+}
+.menu_list li a img {
+	width: 40px;
+}
+
+footer {
+	margin: 3% 0;
+}
+
+footer .container {
+	display: flex;
+	height: 100px;
+	background-color: #040C2C;
+	border: 1px solid #343A54;
+}
+
+/* News */
+/* Media */
+.media-box {
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 172px 172px 172px 172px;
+}
+
+.box-imager {
+	border: 1px solid #343A54;
+}
+.box-imager img{
+
+}
+/* Wiki */
+/* About As */
+.block-content {}
+.block-content .container {
+	background-color: #040C2C;
+	border: 1px solid #343A54;
+	margin-top: 3%;
+}
+
+.content-header {
+	text-align: center;
+}
+.content-header h1 {
+	font-size: 22px;
+	padding: 5px;
+}
+
+.content-paragraph {
+	text-align: center;
+}
+.content-paragraph p {
+	padding: 5px 8%;
+}
+
+.paragraph-links {}
+.paragraph-links a {
+	display: none;
+	height: 60px;
+	width: 60px;
+	border-radius: 50%;
+}
+.paragraph-links a img {
+	width: inherit;
+}
+
+.content-users {
+	text-align: center;
+}
+.content-users h1 {
+	font-size: 22px;
+	padding: 5px;
+}
+
+.block-user {}
+.inner__FOUR__content-users {
+	margin-top: 10px;
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 172px 172px 172px 172px;
+	grid-column-gap: 20px;
+}
+.inner__THREE__content-users {
+	margin: 10px 0;
+	display: grid;
+	justify-content: center;
+	grid-template-columns: 172px 172px 172px;
+	grid-column-gap: 20px;
+}
+
+.imager-us {}
+.imager-us img {
+	border-radius: 3px;
+}
+.username {
+	padding: 5px 0;
+}
+.nikname {}
