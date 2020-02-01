@@ -1,0 +1,9 @@
+ Возможные id/class,
+	Для Sanbox and RPG/MMo:
+arms
+classes
+mobs
+craft
+blocks
+users
+admins

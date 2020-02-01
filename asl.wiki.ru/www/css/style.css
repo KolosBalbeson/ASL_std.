@@ -1,0 +1,103 @@
+*, *::before, *::after {
+	padding: 0;
+	margin: 0;
+	outline: none;
+	box-sizing: border-box;
+	border: 0;
+}
+a {
+	color: skyblue;
+	text-decoration: none;
+}
+ul,li {
+	list-style: none;
+}
+/*min 1024*/
+body {
+	background-image: url("../imager/technol/backgrounds/back.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-attachment: fixed;
+	font-family: "Arial", sans-serif;
+	font-size: 16px;
+	color: #ffffff;
+}
+
+.wrapper {}
+.container {
+	position: relative;
+	width: 862px;
+	margin: 0 auto;
+}
+
+header {
+	width: 100%;
+	height: 80px;
+	background-color: #040C2C;
+	border-bottom: 1px solid #343A54;
+}
+header .container {
+	display: flex;
+	height: inherit;
+	padding-top: 3px;
+	background-color: #040C2C;
+	border-bottom: 1px solid #343A54;
+}
+
+.logotip {
+	margin-left: 30px;
+	width: 30%;
+	padding-top: 10px;
+}
+.logotip img {
+	width: inherit;
+}
+
+.menu_list {
+	position: absolute;
+	display: flex;
+	right: 30px;
+}
+.menu_list li{
+	min-width: 60px;
+	padding-left: 22px;
+}
+.menu_list li a {
+	display: block;
+	padding: 5px;
+	text-align: center;
+	font-size: 14px;
+	color: #fff;
+}
+.menu_list li a img {
+	width: 40px;
+}
+
+.choice__menu {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	width: 400px;
+	margin: 0 auto;
+	text-align: center;
+}
+.choice__menu div {
+	padding: 5px 10px;
+}
+
+.container__menu {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	min-width: 400px;
+}
+
+.slider__sect {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
