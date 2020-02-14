@@ -1,40 +1,59 @@
 // Функции в коде
-// colorMenuAct(); // Окрашивает пункт меню в соотвествии с url
-
-trueText();
-
+//colorMenuAct(); // Окрашивает пункт меню в соотвествии с url
+colorMenuAct();
 // Глобальные* переменные
-var userBlock = document.querySelector(".block__user");
-
-// userBlock.addEventListener("mouseover", userInfo);
-
-function userInfo(event) {
-	let a = event.getAttribute("id");
-	console.log(a);
+var urlPage, arrlinksid, attr;
+// Глобальные* функции
+function globVar(a,b)
+{
+	// a = element, b = атрибуты
+	return document.querySelector(a).getAttribute(b);
 }
 
-function colorMenuAct() {
-
+function arrfor(a,b)
+{
+	// a = array
+	var i;
+	for (i = 0; i < a.length; i++)
+	{
+    	if(a[i] = b)
+    	{
+    		return a[i];
+    		break;
+    	}
+	}
 }
- 
-function trueText() {
-	var text, findWd, sizeWd, intWd, trueIndexWd, trueWd;
-	var i, j, b; // for
 
-	var a = "";
+// Контент
+function userInfo(e)
+{
+	// userBlock.addEventListener("mouseover", userInfo);
+}
 
-	text = document.querySelector(".content__paragraph p").textContent;
-	findWd = "момент";
+function colorMenuAct()
+{
+	var findWd, sizeWd, sizeArr, summ, trueIndexWd, i, j, a;
+	var trueWd = "";
 
+	urlPage = window.location.href;
+	arrlinksid = new Array("#new","#med","#ab","#wik");
+	attr = "href";
+
+	sizeArr = arrlinksid.length;
 	sizeWd = findWd.length;
-	trueIndexWd = text.toLowerCase().indexOf(findWd);
+
+	findWd = globVar(arrlinksid[2],attr); // index.html
+
+
+	trueIndexWd = urlPage.toLowerCase().indexOf(findWd);
 
 	for(i = 0; i < sizeWd; i++)
 	{
-		j = trueIndexWd + i;
-		a += text[j];
+		summ = trueIndexWd + i;
+		trueWd += urlPage[summ];
 	}
 
-	console.log(a);
+	console.log(urlPage);
 }
+
 
