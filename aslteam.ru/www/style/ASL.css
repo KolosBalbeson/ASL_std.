@@ -1,0 +1,172 @@
+@charset "utf-8";
+*,*::after, *::before {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline: none;
+}
+
+html {
+	height: 100%;
+	overflow:  hidden;
+}
+
+body {
+	height: 100%;
+	width: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Menu */
+nav {
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	top: 40%;
+}
+
+/* Кнопки меню */
+nav a{
+	display: inline-block;
+	height: 40px;
+	width: 200px;
+	background: #fff;
+	font-family: Comic Sans MS;
+	font-size: 22px;
+	padding-top: 7px;
+	opacity: 0.7;
+}
+/* Меню */
+nav a:hover:before {
+	content: '<';
+	font-size: 22px;
+}
+/* Меню */
+nav a:hover:after {
+	content: '>';
+	font-size: 22px;
+}
+
+/* Логотип  - As Second Life */
+.logotip {
+	display: block;
+	width: 595px;
+	height: 80px;
+	position: absolute;
+	left: 45%;
+	margin-left: -220px;
+	top: 15%;
+}
+
+/* Логотип  - As Second Life */
+.logotip > img {
+	display: inline-block;
+	width: 100%;
+}
+
+/* As Second Life */
+#tab {
+	font-family: sans-serif;
+	-webkit-text-fill-color: #777;
+    -webkit-background-clip: text;
+}
+
+/* Кнопки меню */
+.ssl {
+	-webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+/* Кнопки меню */
+.ssl:hover{
+	-webkit-text-fill-color: #777;
+    -webkit-background-clip: text;
+	opacity: 1;
+}
+/* Кнопки меню */
+.ssl:active{
+	-webkit-text-fill-color: #777;
+    -webkit-background-clip: text;
+	opacity: 1;
+}
+
+/* Фоновый слайдер */
+.body_slides{
+    list-style:none;
+    margin:0;
+    padding:0;
+    z-index:-2; 
+    background:#000;}
+.body_slides,
+.body_slides:after{
+    position: fixed;
+    width:100%;
+    height:100%;
+    top:0px;
+    left:0px;}
+.body_slides:after { 
+    content: '';
+    background: transparent black repeat top left;
+	}
+	
+.body_slides li{
+    width:100%;
+    height:100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background-size:cover;
+    background-repeat:none;
+    background-position:center center;
+    background-attachment:fixed;
+    opacity:0;
+    -webkit-animation: anim_slides 24s linear infinite 0s;
+    -moz-animation: anim_slides 24s linear infinite 0s;
+    -o-animation: anim_slides 24s linear infinite 0s;
+    -ms-animation: anim_slides 24s linear infinite 0s;
+    animation: anim_slides 24s linear infinite 0s;
+}
+.body_slides li:nth-child(1){
+background-image: url(image/img1.jpg) 
+}
+.body_slides li:nth-child(2){
+-webkit-animation-delay: 6.0s;
+-moz-animation-delay: 6.0s;
+background-image: url(image/img2.jpg) 
+}
+.body_slides li:nth-child(3){
+-webkit-animation-delay: 12.0s;
+-moz-animation-delay: 12.0s;
+background-image: url(image/img3.jpg) 
+}
+.body_slides li:nth-child(4){
+-webkit-animation-delay: 18.0s;
+-moz-animation-delay: 18.0s;
+background-image: url(image/img4.jpg) 
+}
+@-webkit-keyframes anim_slides {
+0% {opacity:0;}
+6% {opacity:1;}
+24% {opacity:1;}
+30% {opacity:0;}
+100% {opacity:0;}
+}
+@-moz-keyframes anim_slides {
+0% {opacity:0;}
+6% {opacity:1;}
+24% {opacity:1;}
+30% {opacity:0;}
+100% {opacity:0;}
+}
+
+
+.body_slides{
+	min-width: 600px;
+}
+	
