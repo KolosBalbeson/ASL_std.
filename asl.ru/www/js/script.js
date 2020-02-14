@@ -1,19 +1,40 @@
-var blockUser = document.querySelector(".block-user");
+// Функции в коде
+// colorMenuAct(); // Окрашивает пункт меню в соотвествии с url
 
-/*
-blockUser.onmouseover = hoverUser;
+trueText();
 
-function hoverUser(e) {
-	function (el) {
-		if(!el) return console.log("Null");
-		return 
+// Глобальные* переменные
+var userBlock = document.querySelector(".block__user");
+
+// userBlock.addEventListener("mouseover", userInfo);
+
+function userInfo(event) {
+	let a = event.getAttribute("id");
+	console.log(a);
+}
+
+function colorMenuAct() {
+
+}
+ 
+function trueText() {
+	var text, findWd, sizeWd, intWd, trueIndexWd, trueWd;
+	var i, j, b; // for
+
+	var a = "";
+
+	text = document.querySelector(".content__paragraph p").textContent;
+	findWd = "момент";
+
+	sizeWd = findWd.length;
+	trueIndexWd = text.toLowerCase().indexOf(findWd);
+
+	for(i = 0; i < sizeWd; i++)
+	{
+		j = trueIndexWd + i;
+		a += text[j];
 	}
 
-	Console.log();
-} 
-*/
-blockUser.onmouseover = hoverUser;
-function hoverUser(e) {
-    let idU = e.getAttribute('id');
-    console.log(idU);
+	console.log(a);
 }
+
