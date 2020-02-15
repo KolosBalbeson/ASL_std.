@@ -1,27 +1,13 @@
 // Функции в коде
-//colorMenuAct(); // Окрашивает пункт меню в соотвествии с url
-colorMenuAct();
+colorMenuAct(); // Окрашивает пункт меню в соотвествии с url
 // Глобальные* переменные
-var urlPage, arrlinksid, attr;
+var urlPage, indexPage, arrlinksid, attr, globalTrueWd, 
+	findWd;
 // Глобальные* функции
-function globVar(a,b)
+function globAttr(a,b)
 {
 	// a = element, b = атрибуты
 	return document.querySelector(a).getAttribute(b);
-}
-
-function arrfor(a,b)
-{
-	// a = array
-	var i;
-	for (i = 0; i < a.length; i++)
-	{
-    	if(a[i] = b)
-    	{
-    		return a[i];
-    		break;
-    	}
-	}
 }
 
 // Контент
@@ -32,18 +18,26 @@ function userInfo(e)
 
 function colorMenuAct()
 {
-	var findWd, sizeWd, sizeArr, summ, trueIndexWd, i, j, a;
+	var findWd, sizeWd, sizeArr, idArr, summ, trueIndexWd, i, j;
 	var trueWd = "";
 
 	urlPage = window.location.href;
+	indexPage = globAttr("body","id");
 	arrlinksid = new Array("#new","#med","#ab","#wik");
 	attr = "href";
-
 	sizeArr = arrlinksid.length;
+
+	for (j = 0; j < sizeArr; j++)
+	{
+    	if(arrlinksid[j] = indexPage)
+    	{
+    		idArr = arrlinksid[j];
+    		break;
+    	}
+	}
+
+	findWd = globAttr(arrlinksid[idArr],attr); // index.html
 	sizeWd = findWd.length;
-
-	findWd = globVar(arrlinksid[2],attr); // index.html
-
 
 	trueIndexWd = urlPage.toLowerCase().indexOf(findWd);
 
@@ -53,7 +47,7 @@ function colorMenuAct()
 		trueWd += urlPage[summ];
 	}
 
-	console.log(urlPage);
+	console.log(trueIndexWd);
 }
 
 
