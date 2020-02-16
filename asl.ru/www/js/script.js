@@ -1,53 +1,84 @@
 // Функции в коде
 colorMenuAct(); // Окрашивает пункт меню в соотвествии с url
 // Глобальные* переменные
-var urlPage, indexPage, arrlinksid, attr, globalTrueWd, 
-	findWd;
+var urlPage, indexPage, arrlinksid, attr, 
+	findWd, modifWd, trueIndexWd;
+
 // Глобальные* функции
 function globAttr(a,b)
 {
-	// a = element, b = атрибуты
-	return document.querySelector(a).getAttribute(b);
+	/*
+	*   a - element
+	*   b - атрибуты
+	*/
+	if(a != null && b != null)
+		return document.querySelector(a).getAttribute(b);
+	else
+		return console.log("Ошибка, глабольный атрибут не найден.\n Не пришли переменные!"); 
+}
+
+function findWords(searchText,wd)
+{
+	/*
+	*   searchText - текст из которого делается выборка
+	*   wd - разыскиваемое слово
+	*/
+	var trueSizeWd, summSizes, i, arrTrueWd;
+	var trueWd = "";
+
+	if(searchText != null && wd != null)
+	{
+		sizefindWd = wd.length;
+		trueIndexWd = searchText.indexOf(wd);
+
+		for(i = 0; i < sizefindWd; i++)
+		{
+			summSizes = trueIndexWd + i;
+			trueWd += searchText[summSizes];
+		}
+
+		arrTrueWd = new Array(trueWd, trueIndexWd);
+		return arrTrueWd;
+	}
+	else
+		return console.log("Ошибка, не возможно найти слово.\n Не пришли переменные!","\n"+wd,"\n"+searchText)
+}
+
+function removeEl(wd)
+{
+	modifWd = wd.replace(/.(\w+)/i, "$1");
+	return modifWd;
 }
 
 // Контент
-function userInfo(e)
-{
-	// userBlock.addEventListener("mouseover", userInfo);
-}
-
 function colorMenuAct()
 {
-	var findWd, sizeWd, sizeArr, idArr, summ, trueIndexWd, i, j;
-	var trueWd = "";
+	var findWd, sizeWd, sizeArr, trueEditWd, j;
 
 	urlPage = window.location.href;
 	indexPage = globAttr("body","id");
 	arrlinksid = new Array("#new","#med","#ab","#wik");
 	attr = "href";
-	sizeArr = arrlinksid.length;
 
-	for (j = 0; j < sizeArr; j++)
-	{
-    	if(arrlinksid[j] = indexPage)
-    	{
-    		idArr = arrlinksid[j];
-    		break;
-    	}
-	}
+	findWd = globAttr(arrlinksid[indexPage],attr);
 
-	findWd = globAttr(arrlinksid[idArr],attr); // index.html
-	sizeWd = findWd.length;
+	trueEditWd = findWords(urlPage,findWd);
 
-	trueIndexWd = urlPage.toLowerCase().indexOf(findWd);
+	console.log(trueEditWd[0]);
 
-	for(i = 0; i < sizeWd; i++)
-	{
-		summ = trueIndexWd + i;
-		trueWd += urlPage[summ];
-	}
-
-	console.log(trueIndexWd);
+	//console.log(trueWd);
+	//console.log(trueIndexWd);
+	
 }
 
 
+function userInfo(e)
+{
+	// userBlock.addEventListener("mouseover", userInfo);
+	/*
+
+			if(i == sizefindWd)
+				return trueWd;
+
+	*/
+}
