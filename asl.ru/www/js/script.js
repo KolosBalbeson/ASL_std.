@@ -13,6 +13,8 @@ function globAttr(a,b)
 	*/
 	if(a != null && b != null)
 		return document.querySelector(a).getAttribute(b);
+	else if(a != null && b == null)
+		return document.querySelector(a);
 	else
 		return console.log("Ошибка, глабольный атрибут не найден.\n Не пришли переменные!"); 
 }
@@ -46,39 +48,27 @@ function findWords(searchText,wd)
 
 function removeEl(wd)
 {
-	modifWd = wd.replace(/.(\w+)/i, "$1");
+	// wd - изменяемое слово
+	modifWd = wd.replace(/./g, "");
 	return modifWd;
 }
 
 // Контент
 function colorMenuAct()
 {
-	var findWd, sizeWd, sizeArr, trueEditWd, j;
+	var findWd, sizeWd, sizeArr, wd, j;
 
-	urlPage = window.location.href;
-	indexPage = globAttr("body","id");
+	//urlPage = window.location.href;
+	attr = "id";
+	indexPage = globAttr("body",attr);
+
 	arrlinksid = new Array("#new","#med","#ab","#wik");
-	attr = "href";
 
-	findWd = globAttr(arrlinksid[indexPage],attr);
-
-	trueEditWd = findWords(urlPage,findWd);
-
-	console.log(trueEditWd[0]);
-
-	//console.log(trueWd);
-	//console.log(trueIndexWd);
-	
+	sLi =  globAttr(arrlinksid[indexPage]).setAttribute("style", "background-color: #464E6E;");
 }
 
 
 function userInfo(e)
 {
 	// userBlock.addEventListener("mouseover", userInfo);
-	/*
-
-			if(i == sizefindWd)
-				return trueWd;
-
-	*/
 }

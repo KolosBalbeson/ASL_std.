@@ -63,8 +63,7 @@ header .container {
 	font-size: 14px;
 	color: #fff;
 	/*background-color: #464E6E;*/
-	padding: 0 5px;
-	padding-top: 7.5px;
+	padding: 7.5px 5px 2px 5px;
 }
 .menu_list li a:hover {
 	transform: scale(1.2);
