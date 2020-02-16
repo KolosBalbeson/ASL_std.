@@ -1,8 +1,9 @@
 [
   {
-    "id": 1,
+    "id": 0,
     "name": "Витя Близниченко",
     "imager": "imager/technol/photo_admins/1.jpg",
+    "alt_imager":"Фотография с сайта Вконтакте - Витя",
     "age": "X",
     "secretIdentity": "Snoop1CattZ69",
     "links": [
@@ -20,9 +21,10 @@
     ]
   },
   {
-    "id": 2,
+    "id": 1,
     "name": "Никита Тихонов",
     "imager": "imager/technol/photo_admins/2.jpg",
+    "alt_imager":"Фотография с сайта Вконтакте - Никита",
     "age": "X",
     "secretIdentity": "Nekit San",
     "links": [
@@ -40,9 +42,10 @@
     ]
   },
   {
-    "id": 3,
+    "id": 2,
     "name": "Юрий Иванов",
     "imager": "imager/technol/photo_admins/3.jpg",
+    "alt_imager":"Фотография с сайта Вконтакте - Юрий",
     "age": "X",
     "secretIdentity": "HalfDeadMan",
     "links": [
@@ -60,9 +63,10 @@
     ]
   },
   {
-    "id": 4,
+    "id": 3,
     "name": "Александр Андрианов",
     "imager": "imager/technol/photo_admins/4.jpg",
+    "alt_imager":"Фотография с сайта Вконтакте - Александр",
     "age": "X",
     "secretIdentity": "Fexaras",
     "links": [
@@ -80,9 +84,10 @@
     ]
   },
   {
-    "id": 5,
+    "id": 4,
     "name": "Ростик Завьялов",
     "imager": "imager/technol/photo_admins/5.jpg",
+    "alt_imager":"Фотография с сайта Вконтакте - Ростик",
     "age": "X",
     "secretIdentity": "maybe",
     "links": [
@@ -100,9 +105,10 @@
     ]
   },
   {
-    "id": 6,
+    "id": 5,
     "name": "Никита Половинкин",
     "imager": "imager/technol/photo_admins/6.jpg",
+    "alt_imager":"Фотография с сайта Вконтакте - Никита",
     "age": "X",
     "secretIdentity": "Krooton",
     "links": [
@@ -120,9 +126,10 @@
     ]
   },
   {
-    "id": 7,
+    "id": 6,
     "name": "Иван Юсюмбели",
     "imager": "imager/technol/photo_admins/7.jpg",
+    "alt_imager":"Фотография с сайта Вконтакте - Иван",
     "age": "X",
     "secretIdentity": "Obdolbanius",
     "links": [

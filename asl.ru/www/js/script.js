@@ -1,8 +1,9 @@
 // Функции в коде
 colorMenuAct();
+infoTeamASL();
 
 // Глобальные* переменные
-var urlPage, indexPage, arrlinksid, attr, 
+var urlPage, indexPage, arrlinksid, el, attr, 
 	findWd, modifWd, trueIndexWd;
 var infoAdmins = "json/infoAdmins.json"
 
@@ -68,16 +69,27 @@ function colorMenuAct()
 
 	//urlPage = window.location.href;
 	attr = "id";
-	indexPage = globAttr("body",attr);
+	el = "body";
+	indexPage = globAttr(el,attr);
 
 	arrlinksid = new Array("#new","#med","#ab","#wik");
 	sLi =  globAttr(arrlinksid[indexPage]).setAttribute("style", "background-color: #464E6E;");
 }
 
 // $Функция добваления информации об команде проекта
-function infoTeamASL(e)
+function infoTeamASL()
 {
 	// userBlock.addEventListener("mouseover", userInfo);
-	var request = new XMLHttpRequest();
-	request.open('GET', infoAdmins);
+	// infoAdmins
+	var block_adms, request, i;
+
+	el = new Array(".inner__FOUR__content__users",".inner__THREE__content__users");
+	block_adms = new Array(globAttr(el[0]),globAttr(el[1]));
+
+	// insertBlocks(1,2,3,4,5,6,7);
+
+	function insertBlocks(block_adms,lingthArr,idAdm,imgAdm,imgAltAdm,name,secretIdentity)
+	{
+		return block_adms[lingthArr].innerHTML = '<div class="block__user" id='+idAdm+'><div class="imager__us"><img src='+imgAdm+' alt='+imgAltAdm+'><div class="username">'+name+'</div><div class="nikname">'+secretIdentity+'</div></div></div>';
+	}
 }
