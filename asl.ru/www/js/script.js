@@ -1,10 +1,14 @@
 // Функции в коде
-colorMenuAct(); // Окрашивает пункт меню в соотвествии с url
+colorMenuAct();
+
 // Глобальные* переменные
 var urlPage, indexPage, arrlinksid, attr, 
 	findWd, modifWd, trueIndexWd;
+var infoAdmins = "json/infoAdmins.json"
+
 
 // Глобальные* функции
+// *Функция поиска нужного el/id/class, а так же их атрибутов
 function globAttr(a,b)
 {
 	/*
@@ -16,13 +20,14 @@ function globAttr(a,b)
 	else if(a != null && b == null)
 		return document.querySelector(a);
 	else
-		return console.log("Ошибка, глабольный атрибут не найден.\n Не пришли переменные!"); 
+		return console.log("Ошибка!!.\n Не пришли переменные!"); 
 }
 
+// *Функция поиска нужного слова из текста
 function findWords(searchText,wd)
 {
 	/*
-	*   searchText - текст из которого делается выборка
+	*   searchText - текст в котором ведется поиск
 	*   wd - разыскиваемое слово
 	*/
 	var trueSizeWd, summSizes, i, arrTrueWd;
@@ -46,6 +51,7 @@ function findWords(searchText,wd)
 		return console.log("Ошибка, не возможно найти слово.\n Не пришли переменные!","\n"+wd,"\n"+searchText)
 }
 
+// *Функция измененеия слова
 function removeEl(wd)
 {
 	// wd - изменяемое слово
@@ -53,7 +59,9 @@ function removeEl(wd)
 	return modifWd;
 }
 
-// Контент
+
+// $Работа с контентной частью
+// $Функция окрашивает пункт меню в соотвествии на какой вкладке user находится
 function colorMenuAct()
 {
 	var findWd, sizeWd, sizeArr, wd, j;
@@ -63,12 +71,13 @@ function colorMenuAct()
 	indexPage = globAttr("body",attr);
 
 	arrlinksid = new Array("#new","#med","#ab","#wik");
-
 	sLi =  globAttr(arrlinksid[indexPage]).setAttribute("style", "background-color: #464E6E;");
 }
 
-
-function userInfo(e)
+// $Функция добваления информации об команде проекта
+function infoTeamASL(e)
 {
 	// userBlock.addEventListener("mouseover", userInfo);
+	var request = new XMLHttpRequest();
+	request.open('GET', infoAdmins);
 }

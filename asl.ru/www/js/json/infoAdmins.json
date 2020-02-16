@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "name": "Витя Близниченко",
+    "imager": "imager/technol/photo_admins/1.jpg",
+    "age": "X",
+    "secretIdentity": "Snoop1CattZ69",
+    "links": [
+      {
+        "vk": "xxxx",
+        "inst": "xxxx",
+        "twich": "xxxx",
+        "youtube": "xxxx"
+      }
+    ],
+    "powers": [
+      "Глава студии ASLTeam",
+      "Главный разработчки",
+      "JAVA - разработчик"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Никита Тихонов",
+    "imager": "imager/technol/photo_admins/2.jpg",
+    "age": "X",
+    "secretIdentity": "Nekit San",
+    "links": [
+      {
+        "vk": "xxxx",
+        "inst": "xxxx",
+        "twich": "xxxx",
+        "youtube": "xxxx"
+      }
+    ],
+    "powers": [
+      "Web - разработчик",
+      "Администратор сайта",
+      "Администратор ASL-wiki"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Юрий Иванов",
+    "imager": "imager/technol/photo_admins/3.jpg",
+    "age": "X",
+    "secretIdentity": "HalfDeadMan",
+    "links": [
+      {
+        "vk": "xxxx",
+        "inst": "xxxx",
+        "twich": "xxxx",
+        "youtube": "xxxx"
+      }
+    ],
+    "powers": [
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Александр Андрианов",
+    "imager": "imager/technol/photo_admins/4.jpg",
+    "age": "X",
+    "secretIdentity": "Fexaras",
+    "links": [
+      {
+        "vk": "xxxx",
+        "inst": "xxxx",
+        "twich": "xxxx",
+        "youtube": "xxxx"
+      }
+    ],
+    "powers": [
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Ростик Завьялов",
+    "imager": "imager/technol/photo_admins/5.jpg",
+    "age": "X",
+    "secretIdentity": "maybe",
+    "links": [
+      {
+        "vk": "xxxx",
+        "inst": "xxxx",
+        "twich": "xxxx",
+        "youtube": "xxxx"
+      }
+    ],
+    "powers": [
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Никита Половинкин",
+    "imager": "imager/technol/photo_admins/6.jpg",
+    "age": "X",
+    "secretIdentity": "Krooton",
+    "links": [
+      {
+        "vk": "xxxx",
+        "inst": "xxxx",
+        "twich": "xxxx",
+        "youtube": "xxxx"
+      }
+    ],
+    "powers": [
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Иван Юсюмбели",
+    "imager": "imager/technol/photo_admins/7.jpg",
+    "age": "X",
+    "secretIdentity": "Obdolbanius",
+    "links": [
+      {
+        "vk": "xxxx",
+        "inst": "xxxx",
+        "twich": "xxxx",
+        "youtube": "xxxx"
+      }
+    ],
+    "powers": [
+      "xxxxxxxx",
+      "xxxxxxxx",
+      "xxxxxxxx"
+    ]
+  }
+]
