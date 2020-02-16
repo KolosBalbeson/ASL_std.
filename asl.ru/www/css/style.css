@@ -42,7 +42,6 @@ header .container {
 	height: inherit;
 	padding-top: 3px;
 	background-color: #040C2C;
-	border-bottom: 1px solid #343A54;
 }
 
 .logotip {
@@ -62,7 +61,6 @@ header .container {
 	text-align: center;
 	font-size: 14px;
 	color: #fff;
-	/*background-color: #464E6E;*/
 	padding: 7.5px 5px 2px 5px;
 }
 .menu_list li a:hover {

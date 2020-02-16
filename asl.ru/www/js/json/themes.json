@@ -1,0 +1,58 @@
+[
+    {
+        "id":1,
+        "name" : "default",
+        "style": [
+            {
+                "body":"background-image: url('../imager/technol/backgrounds/back.jpg'); color: #ffffff;",
+                "header":"background-color: #040C2C; border-bottom: 1px solid #343A54;",
+                "header .container":"background-color: #040C2C;",
+                ".menu_list li a":"color:#ffffff;",
+                ".block__content .container":"background-color: #040C2C; border-bottom: 1px solid #343A54;",
+                "footer .container":"background-color: #040C2C; border-bottom: 1px solid #343A54;"
+            }
+        ]
+    },
+    {
+        "id":2,
+        "name" : "white",
+        "style": [
+            {
+                "body":"background-image: url('../imager/technol/backgrounds/xxxx.xxxx'); color: #xxxx;",
+                "header":"background-color: #xxxx; border-bottom: 1px solid #xxxx;",
+                "header .container":"background-color: #xxxx;",
+                ".menu_list li a":"color:#xxxx;",
+                ".block__content .container":"background-color: #xxxx; border-bottom: 1px solid #xxxx;",
+                "footer .container":"background-color: #xxxx; border-bottom: 1px solid #xxxx;"
+            }
+        ]
+    },
+    {
+        "id":3,
+        "name" : "dark",
+        "style": [
+            {
+                "body":"background-image: url('../imager/technol/backgrounds/xxxx.xxxx'); color: #xxxx;",
+                "header":"background-color: #xxxx; border-bottom: 1px solid #xxxx;",
+                "header .container":"background-color: #xxxx;",
+                ".menu_list li a":"color:#xxxx;",
+                ".block__content .container":"background-color: #xxxx; border-bottom: 1px solid #xxxx;",
+                "footer .container":"background-color: #xxxx; border-bottom: 1px solid #xxxx;"
+            }
+        ]
+    },
+    {
+        "id":4,
+        "name" : "grey",
+        "style": [
+            {
+                "body":"background-image: url('../imager/technol/backgrounds/xxxx.xxxx'); color: #xxxx;",
+                "header":"background-color: #xxxx; border-bottom: 1px solid #xxxx;",
+                "header .container":"background-color: #xxxx;",
+                ".menu_list li a":"color:#xxxx;",
+                ".block__content .container":"background-color: #xxxx; border-bottom: 1px solid #xxxx;",
+                "footer .container":"background-color: #xxxx; border-bottom: 1px solid #xxxx;"
+            }
+        ]
+    }
+]
