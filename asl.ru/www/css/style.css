@@ -27,7 +27,6 @@ ul,li {
 	
 }
 .container {
-	position: relative;
 	width: 862px;
 	margin: 0 auto;
 }
@@ -51,10 +50,9 @@ header .container {
 	width: inherit;
 }
 .menu_list {
-	position: absolute;
-	right: 0;
-	top: 0;
 	display: flex;
+	justify-content: flex-end;
+	width: 73%;
 }
 .menu_list li a {
 	display: block;
