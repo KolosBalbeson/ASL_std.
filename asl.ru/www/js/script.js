@@ -2,14 +2,10 @@
 colorMenuAct();
 infoTeamASL();
 
-// Глобальные* переменные
-var urlPage, indexPage, arrlinksid, el, attr, 
-	findWd, modifWd, trueIndexWd;
-var infoAdmins = "json/infoAdmins.json"
-
+var el, attr;
 
 // Глобальные* функции
-// *Функция поиска нужного el/id/class, а так же их атрибутов
+// *Функция поиска нужного tag/id/class, а так же их атрибутов
 function globAttr(a,b)
 {
 	/*
@@ -24,40 +20,40 @@ function globAttr(a,b)
 		return console.log("Ошибка!!.\n Не пришли переменные!"); 
 }
 
+// *Функция измененеия слова
+function removeEl(word)
+{
+	// word - изменяемое слово
+	var modifWord = word.replace(/0/g, "");
+	return modifWord;
+}
+
 // *Функция поиска нужного слова из текста
-function findWords(searchText,wd)
+function findWords(searchText,word)
 {
 	/*
 	*   searchText - текст в котором ведется поиск
-	*   wd - разыскиваемое слово
+	*   word - разыскиваемое слово
 	*/
-	var trueSizeWd, summSizes, i, arrTrueWd;
-	var trueWd = "";
+	var sizefindWord, trueIndexWord, summSizes, arrTrueWord, i;
+	var trueWord = "";
 
-	if(searchText != null && wd != null)
+	if(searchText != null && word != null)
 	{
-		sizefindWd = wd.length;
-		trueIndexWd = searchText.indexOf(wd);
+		sizefindWord = word.length;
+		trueIndexWord = searchText.indexOf(word);
 
-		for(i = 0; i < sizefindWd; i++)
+		for(i = 0; i < sizefindWord; i++)
 		{
-			summSizes = trueIndexWd + i;
-			trueWd += searchText[summSizes];
+			summSizes = trueIndexWord + i;
+			trueWord += searchText[summSizes];
 		}
 
-		arrTrueWd = new Array(trueWd, trueIndexWd);
-		return arrTrueWd;
+		arrTrueWord = new Array(trueWord, trueIndexWord);
+		return arrTrueWord;
 	}
 	else
 		return console.log("Ошибка, не возможно найти слово.\n Не пришли переменные!","\n"+wd,"\n"+searchText)
-}
-
-// *Функция измененеия слова
-function removeEl(wd)
-{
-	// wd - изменяемое слово
-	modifWd = wd.replace(/./g, "");
-	return modifWd;
 }
 
 
@@ -65,15 +61,16 @@ function removeEl(wd)
 // $Функция окрашивает пункт меню в соотвествии на какой вкладке находится user
 function colorMenuAct()
 {
-	var findWd, sizeWd, sizeArr, wd, j;
+	var indexPage, arrlinksid, styleMenu;
 
-	//urlPage = window.location.href;
 	attr = "id";
 	el = "body";
 	indexPage = globAttr(el,attr);
+	indexPage = removeEl(indexPage) - 1;
 
 	arrlinksid = new Array("#new","#med","#ab","#wik");
-	sLi =  globAttr(arrlinksid[indexPage]).setAttribute("style", "background-color: #464E6E;");
+
+	styleMenu =  globAttr(arrlinksid[indexPage]).setAttribute("style", "background-color: #464E6E;");
 }
 
 // $Функция добваления информации об команде проекта
@@ -81,10 +78,11 @@ function infoTeamASL()
 {
 	// userBlock.addEventListener("mouseover", userInfo);
 	// infoAdmins
-	var block_adms, request, i;
+	var block_adms, i;
 
-	el = new Array(".inner__FOUR__content__users",".inner__THREE__content__users");
-	block_adms = new Array(globAttr(el[0]),globAttr(el[1]));
+	var infoAdmins = "json/infoAdmins.json"
+	var request = new XMLHttpRequest();
+	request.open('GET', infoAdmins);
 
 	// insertBlocks(1,2,3,4,5,6,7);
 
