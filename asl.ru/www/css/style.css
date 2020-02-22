@@ -27,41 +27,41 @@ ul,li {
 	
 }
 .container {
-	width: 862px;
+	width: 80vw;
 	margin: 0 auto;
 }
 
 header {
-	width: 100%;
+	width: 100vw;
 	background-color: #040C2C;
 	border-bottom: 1px solid #343A54;
 }
 header .container {
 	display: flex;
 	height: inherit;
-	padding-top: 3px;
-	background-color: #040C2C;
 }
 
 .logotip {
-	width: 27%;
+	width: 74.6px;
 }
 .logotip img {
+	padding-top: 2px;
 	width: inherit;
 }
 .menu_list {
 	display: flex;
-	justify-content: flex-end;
-	width: 73%;
+	justify-content: flex-end; 
+	width: 100%;
 }
 .menu_list li a {
 	display: block;
 	text-align: center;
 	font-size: 14px;
 	color: #fff;
-	padding: 7.5px 5px 2px 5px;
+	padding: 11.5px 5px 4px 5px;
 }
 .menu_list li a:hover {
+	background-color: #464E6E;
 	transform: scale(1.2);
 	transition: transform .3s;
 }
@@ -87,9 +87,47 @@ footer .container {
 	background-color: #eee;
 	color: #000;
 	width: 100%;
-	height: 15vh;
+	height: 134px;
 	margin-bottom: 15px;
+	padding: 5px;
 }
+
+.inform__block {
+	display: grid;
+	grid-template-columns: 1fr .1fr;
+}
+
+.text__new {
+	padding-right: 5px;
+}
+
+.text__new h1 {}
+.text__new p {
+	height: 54px;
+	text-indent: 1.5em;
+    text-align: justify;
+    overflow: hidden;
+}
+
+.imager__new {
+	background-color: #000;
+	width: 124px;
+	height: 100px;
+}
+
+.addit__info__block {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding-top: 5px;
+}
+.author__new {
+	text-align: left;
+}
+.data__new {
+	text-align: right;
+}
+
+
 /* Media */
 .media__box {
 	display: grid;
@@ -143,26 +181,24 @@ footer .container {
 
 .content__users {
 	text-align: center;
+	padding-bottom: 15px;
 }
 .content__users h1 {
 	font-size: 22px;
 	padding: 5px;
 }
 
-.block__user {}
-.inner__FOUR__content__users {
-	margin-top: 10px;
+.attach__block_users {
 	display: grid;
 	justify-content: center;
 	grid-template-columns: 172px 172px 172px 172px;
-	grid-column-gap: 20px;
+	grid-template-rows: 230px 230px;
+	grid-gap: 10px;
 }
-.inner__THREE__content__users {
-	margin: 10px 0;
-	display: grid;
-	justify-content: center;
-	grid-template-columns: 172px 172px 172px;
-	grid-column-gap: 20px;
+
+
+.block__user {
+	/*background-color: pink;*/
 }
 
 .imager__us {}
