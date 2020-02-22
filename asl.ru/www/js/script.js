@@ -65,7 +65,6 @@ function infoTeamASL()
 	request.onload = function() {
 	  var superHeroes = request.response;
 	  populateHeader(superHeroes);
-	  showHeroes(superHeroes);
 	}
 
 

@@ -6,52 +6,37 @@
   </head>
 
   <body>
+  	<header>
+	</header>
 
-    <script>
-    const superHeroes = {
-      "squadName" : "Super hero squad",
-      "homeTown" : "Metro City",
-      "formed" : 2016,
-      "secretBase" : "Super tower",
-      "active" : true,
-      "members" : [
-        {
-          "name" : "Molecule Man",
-          "age" : 29,
-          "secretIdentity" : "Dan Jukes",
-          "powers" : [
-            "Radiation resistance",
-            "Turning tiny",
-            "Radiation blast"
-          ]
-        },
-        {
-          "name" : "Madame Uppercut",
-          "age" : 39,
-          "secretIdentity" : "Jane Wilson",
-          "powers" : [
-            "Million tonne punch",
-            "Damage resistance",
-            "Superhuman reflexes"
-          ]
-        },
-        {
-          "name" : "Eternal Flame",
-          "age" : 1000000,
-          "secretIdentity" : "Unknown",
-          "powers" : [
-            "Immortality",
-            "Heat Immunity",
-            "Inferno",
-            "Teleportation",
-            "Interdimensional travel"
-          ]
-        }
-      ]
-    }
-    superHeroes.homeTown;
-	superHeroes['active'];
-    console.log(superHeroes['members'][1]['powers'][2]);
+	<section>
+	</section>
+	<script>
+var header = document.querySelector('header');
+var section = document.querySelector('section');
+
+//var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+var requestURL = "infoUsers.json";
+
+
+var request = new XMLHttpRequest();
+request.open('GET', requestURL);
+
+request.responseType = 'json';
+request.send();
+
+request.onload = function() {
+  var superHeroes = request.response;
+  showHeroes(superHeroes);
+}
+
+
+function showHeroes(jsonObj) {
+  var heroes = jsonObj['Admins'];
+      
+ console.log(heroes);
+}
+
     </script>
   </body>
 </html>
