@@ -4,38 +4,34 @@
     <meta charset="utf-8">
     <title>Simple JSON example</title>
   </head>
-
   <body>
-  	<header>
-	</header>
+	 <script type="TEXT/javascript">
 
-	<section>
-	</section>
-	<script>
-var header = document.querySelector('header');
-var section = document.querySelector('section');
+    //var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+    //var requestURL = "https://github.com/NekitSan/ASL_std./blob/master/asl.ru/www/js/json/infoUsers.json";
+    var requestURL = "/js/json/infoUsers.json";
 
-//var requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
-var requestURL = "infoUsers.json";
+    var request = new XMLHttpRequest();
+    request.open('GET', requestURL);
 
+    request.responseType = 'json';
+    request.send();
 
-var request = new XMLHttpRequest();
-request.open('GET', requestURL);
-
-request.responseType = 'json';
-request.send();
-
-request.onload = function() {
-  var superHeroes = request.response;
-  showHeroes(superHeroes);
-}
+    request.onload = function() {
+      var superHeroes = request.response;
+      jsonEl(superHeroes);
+    }
 
 
-function showHeroes(jsonObj) {
-  var heroes = jsonObj['Admins'];
+    function jsonEl(jsonObj) {
+      var myH1 = document.createElement('h1');
+      var sss = jsonObj['Admins'].length;
       
- console.log(heroes);
-}
+      for(var i = 0; i < sss; i++)
+      {
+        console.log(jsonObj['Admins'][i]['id']);
+      }
+    }
 
     </script>
   </body>

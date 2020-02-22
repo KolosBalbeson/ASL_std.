@@ -55,18 +55,34 @@ function infoTeamASL()
 	// infoAdmins
 	var block_adms, i;
 
-	var infoAdmins = "json/infoAdmins.json"
-	var request = new XMLHttpRequest();
-	request.open('GET', infoAdmins);
+    var requestURL = "/js/json/infoUsers.json";
 
-	request.responseType = 'json';
-	request.send();
+    var request = new XMLHttpRequest();
+    request.open('GET', requestURL);
 
-	request.onload = function() {
-	  var superHeroes = request.response;
-	  populateHeader(superHeroes);
-	}
+    request.responseType = 'json';
+    request.send();
 
+    request.onload = function() {
+      var jsonUsers = request.response;
+      dataUsers(jsonUsers);
+    }
+
+    function dataUsers(jsonObj) {
+    	var sizeArrAdmin = jsonObj['Admins'].length();
+
+    	var sizeArrAdminLink = jsonObj['Admins'][].length();
+    	var sizeArrAdminPower = jsonObj['Admins'][].length();
+
+    	var userId = jsonObj['Admins'][i]['id'];
+    	var userName = jsonObj['Admins'][i]['name'];
+    	var userImage = jsonObj['Admins'][i]['imager'];
+    	var userAltImg = jsonObj['Admins'][i]['alt_imager'];
+    	var usersecretId = jsonObj['Admins'][i]['secretIdentity'];
+    	var userLink = jsonObj['Admins'][i]['links'][i];
+    	var userAccesLVL = jsonObj['Admins'][i]['accesLVL'];
+    	var userPowers = jsonObj['Admins'][i]['powers'][i];
+    }
 
 	// insertBlocks(1,2,3,4,5,6,7);
 

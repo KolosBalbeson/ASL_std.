@@ -1,5 +1,4 @@
-[
-  {
+{
     "Admins" : [
       {
         "id" : 0,
@@ -14,6 +13,7 @@
           "twich" : "xxxx",
           "youtube" : "xxxx"
         }],
+        "accesLVL" : 0,
         "powers" : [
           "Глава студии ASLTeam",
           "Главный разработчки",
@@ -33,6 +33,7 @@
           "twich" : "xxxx",
           "youtube" : "xxxx"
         }],
+        "accesLVL" : 0,
         "powers" : [
           "Web - разработчик",
           "Администратор сайта",
@@ -52,6 +53,7 @@
           "twich" : "xxxx",
           "youtube" : "xxxx"
         }],
+        "accesLVL" : 1,
         "powers" : [
           "Глава студии ASLTeam",
           "Главный разработчки",
@@ -71,6 +73,7 @@
           "twich" : "xxxx",
           "youtube" : "xxxx"
         }],
+        "accesLVL" : 1,
         "powers" : [
           "Глава студии ASLTeam",
           "Главный разработчки",
@@ -90,6 +93,7 @@
           "twich" : "xxxx",
           "youtube" : "xxxx"
         }],
+        "accesLVL" : 1,
         "powers" : [
           "Глава студии ASLTeam",
           "Главный разработчки",
@@ -109,6 +113,7 @@
           "twich" : "xxxx",
           "youtube" : "xxxx"
         }],
+        "accesLVL" : 1,
         "powers" : [
           "Глава студии ASLTeam",
           "Главный разработчки",
@@ -128,17 +133,12 @@
           "twich" : "xxxx",
           "youtube" : "xxxx"
         }],
+        "accesLVL" : 1,
         "powers" : [
           "Глава студии ASLTeam",
           "Главный разработчки",
           "JAVA - разработчик"
         ]
       }
-    ],
-    "Users": [
-      {
-      "id" : 0
-      }
     ]
-  }
-]
+}
