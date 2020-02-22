@@ -15,6 +15,7 @@ body {
 	font-family: "Arial", sans-serif;
 	font-size: 16px;
 	color: #ffffff;
+	overflow-x: hidden;
 }
 a {
 	color: skyblue;
@@ -94,7 +95,7 @@ footer .container {
 
 .inform__block {
 	display: grid;
-	grid-template-columns: 1fr .1fr;
+	grid-template-columns: 1fr .12fr;
 }
 
 .text__new {
@@ -111,14 +112,14 @@ footer .container {
 
 .imager__new {
 	background-color: #000;
-	width: 124px;
+	width: auto;
 	height: 100px;
 }
 
 .addit__info__block {
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	padding-top: 5px;
+	padding-top: 8px;
 }
 .author__new {
 	text-align: left;
