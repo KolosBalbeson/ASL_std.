@@ -2,14 +2,17 @@
 colorMenuAct();
 infoTeamASL();
 
-var el, attr;
 
-// Глобальные* функции
+// Глобальные* переменные
+var tag, attr;
+
+
+// Глобальные* функции:
 // *Функция поиска нужного tag/id/class, а так же их атрибутов
 function globAttr(a,b)
 {
 	/*
-	*   a - element
+	*   a - tag/id/class
 	*   b - атрибуты
 	*/
 	if(a != null && b != null)
@@ -28,44 +31,16 @@ function removeEl(word)
 	return modifWord;
 }
 
-// *Функция поиска нужного слова из текста
-function findWords(searchText,word)
-{
-	/*
-	*   searchText - текст в котором ведется поиск
-	*   word - разыскиваемое слово
-	*/
-	var sizefindWord, trueIndexWord, summSizes, arrTrueWord, i;
-	var trueWord = "";
 
-	if(searchText != null && word != null)
-	{
-		sizefindWord = word.length;
-		trueIndexWord = searchText.indexOf(word);
-
-		for(i = 0; i < sizefindWord; i++)
-		{
-			summSizes = trueIndexWord + i;
-			trueWord += searchText[summSizes];
-		}
-
-		arrTrueWord = new Array(trueWord, trueIndexWord);
-		return arrTrueWord;
-	}
-	else
-		return console.log("Ошибка, не возможно найти слово.\n Не пришли переменные!","\n"+wd,"\n"+searchText)
-}
-
-
-// $Работа с контентной частью
+// $Работа с контентной частью:
 // $Функция окрашивает пункт меню в соотвествии на какой вкладке находится user
 function colorMenuAct()
 {
 	var indexPage, arrlinksid, styleMenu;
 
 	attr = "id";
-	el = "body";
-	indexPage = globAttr(el,attr);
+	tag = "body";
+	indexPage = globAttr(tag,attr);
 	indexPage = removeEl(indexPage) - 1;
 
 	arrlinksid = new Array("#new","#med","#ab","#wik");
@@ -83,6 +58,16 @@ function infoTeamASL()
 	var infoAdmins = "json/infoAdmins.json"
 	var request = new XMLHttpRequest();
 	request.open('GET', infoAdmins);
+
+	request.responseType = 'json';
+	request.send();
+
+	request.onload = function() {
+	  var superHeroes = request.response;
+	  populateHeader(superHeroes);
+	  showHeroes(superHeroes);
+	}
+
 
 	// insertBlocks(1,2,3,4,5,6,7);
 
