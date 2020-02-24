@@ -20,7 +20,7 @@ function globAttr(a,b)
 	else if(a != null && b == null)
 		return document.querySelector(a);
 	else
-		return console.log("Ошибка!!.\n Не пришли переменные!"); 
+		console.log("Ошибка!!.\n Не пришли переменные!"); 
 }
 
 // *Функция измененеия слова
@@ -51,11 +51,9 @@ function colorMenuAct()
 // $Функция добваления информации об команде проекта
 function infoTeamASL()
 {
-	// userBlock.addEventListener("mouseover", userInfo);
-	// infoAdmins
-	var block_adms, i;
+	var block_adms, text, i;
 
-    var requestURL = "/js/json/infoUsers.json";
+    var requestURL = "js/json/infoUsers.json";
 
     var request = new XMLHttpRequest();
     request.open('GET', requestURL);
@@ -65,29 +63,43 @@ function infoTeamASL()
 
     request.onload = function() {
       var jsonUsers = request.response;
-      dataUsers(jsonUsers);
+	  dataUsers(jsonUsers);
+	  deduceInfoUser(jsonUsers);
     }
 
     function dataUsers(jsonObj) {
-    	var sizeArrAdmin = jsonObj['Admins'].length();
+    	var i, j;
+    	var creatBlockUsers;
+    	var sizeArrAdmin, sizeArrAdminLink, sizeArrAdminPower;
+    	var userId, userName, userImage, userAltImg, userSecretId, userLink, userAccesLVL, userPowers;
+    	var outInfoUser;
 
-    	var sizeArrAdminLink = jsonObj['Admins'][].length();
-    	var sizeArrAdminPower = jsonObj['Admins'][].length();
+    	sizeArrAdmin = jsonObj['Admins'].length;
+    	tag = ".attach__block_users";
+    	creatBlockUsers = globAttr(tag);
 
-    	var userId = jsonObj['Admins'][i]['id'];
-    	var userName = jsonObj['Admins'][i]['name'];
-    	var userImage = jsonObj['Admins'][i]['imager'];
-    	var userAltImg = jsonObj['Admins'][i]['alt_imager'];
-    	var usersecretId = jsonObj['Admins'][i]['secretIdentity'];
-    	var userLink = jsonObj['Admins'][i]['links'][i];
-    	var userAccesLVL = jsonObj['Admins'][i]['accesLVL'];
-    	var userPowers = jsonObj['Admins'][i]['powers'][i];
-    }
+    	for(i = 0; i < sizeArrAdmin; i++){
+	    	userId = jsonObj['Admins'][i]['id'];
+	    	userName = jsonObj['Admins'][i]['name'];
+	    	userImage = jsonObj['Admins'][i]['imager'];
+	    	userAltImg = jsonObj['Admins'][i]['alt_imager'];
+	    	userSecretId = jsonObj['Admins'][i]['secretIdentity'];
+	    	userAccesLVL = jsonObj['Admins'][i]['accesLVL'];
 
-	// insertBlocks(1,2,3,4,5,6,7);
-
-	function insertBlocks(block_adms,lingthArr,idAdm,imgAdm,imgAltAdm,name,secretIdentity)
-	{
-		return block_adms[lingthArr].innerHTML = '<div class="block__user" id='+idAdm+'><div class="imager__us"><img src='+imgAdm+' alt='+imgAltAdm+'><div class="username">'+name+'</div><div class="nikname">'+secretIdentity+'</div></div></div>';
+	    	sizeArrAdminLink = jsonObj['Admins'][i]['links'].length;
+	    	sizeArrAdminPower = jsonObj['Admins'][i]['powers'].length;
+	    	userLink = jsonObj['Admins'][i]['links'];
+	    	userPowers = jsonObj['Admins'][i]['powers'];
+	   		//console.log(userId, userName, userImage, userAltImg, userSecretId, userLink, userAccesLVL, userPowers);
+			text = '<div class="block__user" id='+userId+'><div class="imager__us"><img src='+userImage+' alt='+userAltImg+'><div class="username">'+userName+'</div><div class="nikname">'+userSecretId+'</div></div></div>';
+			creatBlockUsers.innerHTML += text;
+    	}
 	}
+	
+	function deduceInfoUser(jsonObj)
+	{
+
+	}
+
+	
 }

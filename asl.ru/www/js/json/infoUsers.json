@@ -7,13 +7,13 @@
         "alt_imager" :"Фотография с сайта Вконтакте - Витя",
         "age" : "X",
         "secretIdentity" : "Snoop1CattZ69",
-        "links" : [{
-          "vk" : "xxxx",
-          "inst" : "xxxx",
-          "twich" : "xxxx",
-          "youtube" : "xxxx"
-        }],
         "accesLVL" : 0,
+        "links" : [
+          "vk",
+          "inst",
+          "twich",
+          "youtube"
+        ],
         "powers" : [
           "Глава студии ASLTeam",
           "Главный разработчки",
@@ -27,13 +27,13 @@
         "alt_imager":"Фотография с сайта Вконтакте - Никита",
         "age": "X",
         "secretIdentity": "Nekit San",
-        "links" : [{
-          "vk" : "xxxx",
-          "inst" : "xxxx",
-          "twich" : "xxxx",
-          "youtube" : "xxxx"
-        }],
         "accesLVL" : 0,
+        "links" : [
+          "vk",
+          "inst",
+          "twich",
+          "youtube"
+        ],
         "powers" : [
           "Web - разработчик",
           "Администратор сайта",
@@ -42,18 +42,18 @@
       },
       {
         "id": 2,
-        "name": "Юрий Иванов",
-        "imager": "imager/technol/photo_admins/3.jpg",
-        "alt_imager":"Фотография с сайта Вконтакте - Юрий",
+        "name": "Иван Юсюмбели",
+        "imager": "imager/technol/photo_admins/7.jpg",
+        "alt_imager":"Фотография с сайта Вконтакте - Иван",
         "age": "X",
-        "secretIdentity": "HalfDeadMan",
-        "links" : [{
-          "vk" : "xxxx",
-          "inst" : "xxxx",
-          "twich" : "xxxx",
-          "youtube" : "xxxx"
-        }],
+        "secretIdentity": "Obdolbanius",
         "accesLVL" : 1,
+        "links" : [
+          "vk",
+          "inst",
+          "twich",
+          "youtube"
+        ],
         "powers" : [
           "Глава студии ASLTeam",
           "Главный разработчки",
@@ -62,18 +62,18 @@
       },
       {
         "id": 3,
-        "name": "Александр Андрианов",
-        "imager": "imager/technol/photo_admins/4.jpg",
-        "alt_imager":"Фотография с сайта Вконтакте - Александр",
+        "name": "Юрий Иванов",
+        "imager": "imager/technol/photo_admins/3.jpg",
+        "alt_imager":"Фотография с сайта Вконтакте - Юрий",
         "age": "X",
-        "secretIdentity": "Fexaras",
-        "links" : [{
-          "vk" : "xxxx",
-          "inst" : "xxxx",
-          "twich" : "xxxx",
-          "youtube" : "xxxx"
-        }],
+        "secretIdentity": "HalfDeadMan",
         "accesLVL" : 1,
+        "links" : [
+          "vk",
+          "inst",
+          "twich",
+          "youtube"
+        ],
         "powers" : [
           "Глава студии ASLTeam",
           "Главный разработчки",
@@ -87,13 +87,13 @@
         "alt_imager":"Фотография с сайта Вконтакте - Ростик",
         "age": "X",
         "secretIdentity": "maybe",
-        "links" : [{
-          "vk" : "xxxx",
-          "inst" : "xxxx",
-          "twich" : "xxxx",
-          "youtube" : "xxxx"
-        }],
         "accesLVL" : 1,
+        "links" : [
+          "vk",
+          "inst",
+          "twich",
+          "youtube"
+        ],
         "powers" : [
           "Глава студии ASLTeam",
           "Главный разработчки",
@@ -107,33 +107,13 @@
         "alt_imager":"Фотография с сайта Вконтакте - Никита",
         "age": "X",
         "secretIdentity": "Krooton",
-        "links" : [{
-          "vk" : "xxxx",
-          "inst" : "xxxx",
-          "twich" : "xxxx",
-          "youtube" : "xxxx"
-        }],
         "accesLVL" : 1,
-        "powers" : [
-          "Глава студии ASLTeam",
-          "Главный разработчки",
-          "JAVA - разработчик"
-        ]
-      },
-      {
-        "id": 6,
-        "name": "Иван Юсюмбели",
-        "imager": "imager/technol/photo_admins/7.jpg",
-        "alt_imager":"Фотография с сайта Вконтакте - Иван",
-        "age": "X",
-        "secretIdentity": "Obdolbanius",
-        "links" : [{
-          "vk" : "xxxx",
-          "inst" : "xxxx",
-          "twich" : "xxxx",
-          "youtube" : "xxxx"
-        }],
-        "accesLVL" : 1,
+        "links" : [
+          "vk",
+          "inst",
+          "twich",
+          "youtube"
+        ],
         "powers" : [
           "Глава студии ASLTeam",
           "Главный разработчки",
