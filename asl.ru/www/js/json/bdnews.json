@@ -1,0 +1,26 @@
+[
+    {
+        "id" : 0,
+        "h1" : "Заголовок",
+        "text" : "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "img" : [{
+            "url" : "imager/news/xx.jpg",
+            "alt" : "Картинка про много букв `x`"
+        }],
+        "auther" : "Admin",
+        "data" : "01.02.20",
+        "time" : "13:40"
+    },
+    {
+        "id" : 1,
+        "h1" : "Заголовок 2",
+        "text" : "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "img" : [{
+            "url" : "imager/news/xx.jpg",
+            "alt" : "Картинка про много букв `x`"
+        }],
+        "auther" : "Admin",
+        "data" : "01.02.20",
+        "time" : "13:40"
+    }
+]

@@ -1,10 +1,19 @@
-// Функции в коде
 colorMenuAct();
-infoTeamASL();
 
-
-// Глобальные* переменные
+// Проверка страницы, для каждой свои функции
 var tag, attr;
+var urlPage, arrPages, indexPage;
+urlPage = window.location.href;
+arrPages = new Array("index","media","aboutAs");
+
+indexPage = globAttr("body","id");
+indexPage = removeEl(indexPage) - 1;
+urlPage = findWords(urlPage,arrPages[indexPage]);
+
+if(urlPage == arrPages[2])
+{
+	infoTeamASL();
+}
 
 
 // Глобальные* функции:
@@ -31,48 +40,75 @@ function removeEl(word)
 	return modifWord;
 }
 
+// *Функция поиска нужного слова из url page	
+function findWords(searchText,word)	
+{	
+	/*	
+	*   searchText - текст в котором ведется поиск	
+	*   word - нужное слово	
+	*/	
+	var sizefindWord, trueIndexWord, summSizes, arrTrueWord, i;	
+	var trueWord = "";	
+
+
+	if(searchText != null && word != null)	// $Работа с контентной частью:
+	{	
+		sizefindWord = word.length;	
+		trueIndexWord = searchText.indexOf(word);	
+
+		for(i = 0; i < sizefindWord; i++)	
+		{	
+			summSizes = trueIndexWord + i;	
+			trueWord += searchText[summSizes];	
+		}	
+
+		arrTrueWord = new Array(trueWord);	
+		return arrTrueWord;	
+	}	
+	else	
+		console.log("Ошибка, не возможно найти слово.\n Не пришли переменные!","\n"+wd,"\n"+searchText)	
+}
 
 // $Работа с контентной частью:
 // $Функция окрашивает пункт меню в соотвествии на какой вкладке находится user
 function colorMenuAct()
 {
-	var indexPage, arrlinksid, styleMenu;
+	var indexPage, arrIdlinks, styleMenu;
 
 	attr = "id";
 	tag = "body";
 	indexPage = globAttr(tag,attr);
 	indexPage = removeEl(indexPage) - 1;
 
-	arrlinksid = new Array("#new","#med","#ab","#wik");
+	arrIdlinks = new Array("#new","#med","#ab","#wik");
 
-	styleMenu =  globAttr(arrlinksid[indexPage]).setAttribute("style", "background-color: #464E6E;");
+	styleMenu =  globAttr(arrIdlinks[indexPage]).setAttribute("style", "background-color: #464E6E;");
 }
 
 // $Функция добваления информации об команде проекта
 function infoTeamASL()
 {
-	var block_adms, text, i;
+	var text;
+	var requestURL = "js/json/infoUsers.json";
 
-    var requestURL = "js/json/infoUsers.json";
+	var userId, userLinks, userPowers;
+	var	sizeArrAdmin;
+	var userId, userName, userImage, userAltImg, userSecretId;
 
     var request = new XMLHttpRequest();
-    request.open('GET', requestURL);
-
+	request.open('GET', requestURL);
+	
     request.responseType = 'json';
     request.send();
 
     request.onload = function() {
       var jsonUsers = request.response;
 	  dataUsers(jsonUsers);
-	  deduceInfoUser(jsonUsers);
+	  //deduceInfoUser(jsonUsers);
     }
 
     function dataUsers(jsonObj) {
-    	var i, j;
-    	var creatBlockUsers;
-    	var sizeArrAdmin, sizeArrAdminLink, sizeArrAdminPower;
-    	var userId, userName, userImage, userAltImg, userSecretId, userLink, userAccesLVL, userPowers;
-    	var outInfoUser;
+    	var creatBlockUsers, i;
 
     	sizeArrAdmin = jsonObj['Admins'].length;
     	tag = ".attach__block_users";
@@ -83,23 +119,24 @@ function infoTeamASL()
 	    	userName = jsonObj['Admins'][i]['name'];
 	    	userImage = jsonObj['Admins'][i]['imager'];
 	    	userAltImg = jsonObj['Admins'][i]['alt_imager'];
-	    	userSecretId = jsonObj['Admins'][i]['secretIdentity'];
-	    	userAccesLVL = jsonObj['Admins'][i]['accesLVL'];
-
-	    	sizeArrAdminLink = jsonObj['Admins'][i]['links'].length;
-	    	sizeArrAdminPower = jsonObj['Admins'][i]['powers'].length;
-	    	userLink = jsonObj['Admins'][i]['links'];
+			userSecretId = jsonObj['Admins'][i]['secretIdentity'];
+			
+			userLinks = jsonObj['Admins'][i]['links'];
 	    	userPowers = jsonObj['Admins'][i]['powers'];
-	   		//console.log(userId, userName, userImage, userAltImg, userSecretId, userLink, userAccesLVL, userPowers);
-			text = '<div class="block__user" id='+userId+'><div class="imager__us"><img src='+userImage+' alt='+userAltImg+'><div class="username">'+userName+'</div><div class="nikname">'+userSecretId+'</div></div></div>';
+			
+	   		//console.log(userId, userName, userImage, userAltImg, userSecretId);
+			text = '<div class="block__user" onclick="showInfoUser('+userId+');" id='+userId+'><div class="imager__us"><img src='+userImage+' alt='+userAltImg+'><div class="username">'+userName+'</div><div class="nikname">'+userSecretId+'</div></div></div>';
 			creatBlockUsers.innerHTML += text;
-    	}
+		}
 	}
-	
-	function deduceInfoUser(jsonObj)
-	{
+}
 
-	}
-
-	
+function showInfoUser(userid)
+{
+	var arre = new Array(111,2222,3,444,666,7);
+	console.log("Всё робит!  ID = " + userid + "   Arr: " + arre[userid]);
+}
+function hiddenInfoUser()
+{
+		
 }
